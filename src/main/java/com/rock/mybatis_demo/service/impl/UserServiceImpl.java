@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
     public int save(User user) {
         //release v0.1版本，修改测试bug
 
+        //v0.1 Hotfix, bug_404, 修复线上bug
         
         int rows = userMapper.save(user);
         System.out.println("保存对象的id= "+user.getId());
