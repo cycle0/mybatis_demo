@@ -50,6 +50,9 @@ public class UserController {
 	public Object pageVideo(@RequestParam(value = "page",defaultValue = "1")int page,
 							@RequestParam(value = "size",defaultValue = "10")int size){
 
+		//release v0.1版本，修改测试bug
+
+
 		PageHelper.startPage(page,size);
 
 		List<User> list = userService.findAll();
