@@ -86,4 +86,26 @@ public interface UserMapper {
         "where id = #{id,jdbcType=BIGINT}"
     })
     int updateByPrimaryKey(User record);
+
+
+    List<User> findAll();
+
+
+    @Select("SELECT * FROM user WHERE id = #{id}")
+    User findById(long id);
+
+
+    @Update("UPDATE user SET name=#{name} WHERE id =#{id}")
+    int update(User user);
+
+    @Delete("DELETE FROM user WHERE id =#{id}")
+    int delete(long id);
+
+
+    @Insert("INSERT INTO `user` (`NAME`, `age`, `email`, `manager_id`, `create_time`, `update_time`, " +
+            "`version`, `deleted`) " +
+            "VALUES " +
+            "(#{name}, #{age}, #{email}, #{managerId}, #{createTime}, #{updateTime}, #{version}, #{deleted});")
+    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
+    int save(User user);
 }

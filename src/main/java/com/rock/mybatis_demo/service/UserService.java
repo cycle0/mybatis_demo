@@ -1,22 +1,22 @@
 package com.rock.mybatis_demo.service;
 
-import com.rock.mybatis_demo.model.People;
+import com.rock.mybatis_demo.model.User;
 
 import java.util.List;
 
 /**
  * 业务类接口
  */
-public interface PeopleService {
+public interface UserService {
 
-    List<People> findAll();
+    List<User> findAll();
 
-    People findById(long id);
+    User findById(long id);
 
-    int update(People Video);
+    int update(User user);
 
     int delete(long id);
 
-    int save(People video);
+    int save(User user);
 
 }
