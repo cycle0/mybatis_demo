@@ -49,8 +49,12 @@
 		<!--<table tableName="tb_area">-->
 			<!--<generatedKey column="id" sqlStatement="JDBC"/>-->
 		<!--</table>-->
-
+<!--
 		<table tableName="people">
+			<generatedKey column="id" sqlStatement="JDBC"/>
+		</table>
+		-->
+		<table tableName="user">
 			<generatedKey column="id" sqlStatement="JDBC"/>
 		</table>
 
