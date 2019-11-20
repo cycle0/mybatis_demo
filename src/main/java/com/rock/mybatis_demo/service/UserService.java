@@ -19,4 +19,6 @@ public interface UserService {
 
     int save(User user);
 
+    //用户登录认证
+
 }
